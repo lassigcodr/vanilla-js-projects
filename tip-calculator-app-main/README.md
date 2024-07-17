@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Click](https://)
-- Live Site URL: [Click](https://)
+- Solution URL: [Click](https://github.com/lassigcodr/vanilla-js-projects/tree/main/tip-calculator-app-main)
+- Live Site URL: [Click](https://lassigcodr.github.io/vanilla-js-projects/tip-calculator-app-main/index.html)
 
 ## My process
 
