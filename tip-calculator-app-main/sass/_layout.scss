@@ -1,0 +1,27 @@
+.header {
+    
+    &__logo-box {
+        padding: 5rem 0 4rem;
+    }
+    
+    &__logo {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+
+.grid {
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+
+    @media (max-width: 700px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.footer {
+    display: none;
+}

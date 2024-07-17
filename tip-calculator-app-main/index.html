@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__logo-box">
+      <img src="images/logo.svg" alt="splitter" class="header__logo">
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <form class="tip-input">
+        <label for="bill" class="tip-input__label">Bill</label>
+        <input type="number" class="tip-input__input tip-input__input--bill" placeholder="0" step="0.01" id="bill">
+
+        <label class="tip-input__label">Select Tip %</label>
+        <div class="grid radio-tool">
+          <input type="radio" id="radio5" value="5" name="tip-btn">
+          <label for="radio5" class="btn btn--dark-cyan">5%</label>
+
+          <input type="radio" id="radio10" value="10" name="tip-btn">
+          <label for="radio10" class="btn btn--dark-cyan">10%</label>
+
+          <input type="radio" id="radio15" value="15" name="tip-btn">
+          <label for="radio15" class="btn btn--dark-cyan">15%</label>
+
+          <input type="radio" id="radio25" value="25" name="tip-btn">
+          <label for="radio25" class="btn btn--dark-cyan">25%</label>
+
+          <input type="radio" id="radio50" value="50"  name="tip-btn">
+          <label for="radio50" class="btn btn--dark-cyan">50%</label>
+
+          <input type="text" class="btn btn--input" placeholder="Custom" data-tip-custom>
+        </div>
+
+        <label for="people" class="tip-input__label">Number of People</label>
+        <input type="number" class="tip-input__input tip-input__input--people" placeholder="0" min="1" step="1" id="people">
+      </form>
+      
+      <div class="tip-output">
+        <p class="tip-output__amount">
+          <span class="text">Tip Amount</span>
+          <span class="digit" data-tip-amount>$0.00</span>
+        </p>
+        <p class="tip-output__total">
+          <span class="text">Total</span>
+          <span class="digit" data-tip-total>$0.00</span>
+        </p>
+        <button class="btn btn--output" data-reset>Reset</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Obasi Wisdom</a>.
+    </div>
+  </footer>
+
+
+
+  <!-- Bill
+
+  Select Tip %
+  5%
+  10%
+  15%
+  25%
+  50%
+  Custom
+
+  Number of People
+
+  Tip Amount
+  / person
+
+  Total
+  / person
+
+  Reset -->
+  <!-- <script>
+    const t = (15 % 100) / 100;
+    const amt = 142.55;
+    const nP = 5;
+    const ans = t * amt / nP;
+
+    const ansStr = String(ans);
+    let r = '';
+
+    for (let i of ans) {
+      r += i
+    }
+
+  </script> -->
+  <script src="script.js"></script>
+</body>
+</html>
