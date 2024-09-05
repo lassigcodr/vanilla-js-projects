@@ -1,0 +1,36 @@
+
+
+.list {
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+
+    @media (max-width: 600px) {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__item {
+        list-style: none;
+        display: inline-block;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: $color-pale-blue;
+        cursor: pointer;
+        padding-bottom: 1rem;
+
+        &:hover {
+            color: white;
+        }
+
+        &.active {
+            color: white;
+        }
+        
+        // &:not(:last-child) {
+        //     padding-bottom: 1rem;
+        // }
+    }
+}

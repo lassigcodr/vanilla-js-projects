@@ -1,0 +1,24 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-very-dark-blue;
+    font-family: "Rubik", sans-serif;
+
+    @media (max-width: 600px) {
+        padding: 2rem;
+        height: max-content;
+        display: block;
+    }
+}

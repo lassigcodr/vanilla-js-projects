@@ -1,0 +1,114 @@
+.card-profile {
+    background-color: $color-blue;
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+    color: white;
+    max-width: 200px;
+
+    @media (max-width: 600px) {
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    &__image-box {
+        margin-bottom: 2.3rem;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+
+        @media (max-width: 600px) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__image {
+        height: 100%;
+        width: 100%;
+    }
+
+    &__title {
+        font-size: 3.5rem;
+        font-weight: 300;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+
+        @media (max-width: 600px) {
+            font-size: 3rem;
+        }
+
+        &--text-sm {
+            font-size: 1rem;
+            color: $color-pale-blue;
+            display: block;
+        }
+    }
+}
+
+.card {
+    padding-top: 4rem;
+    border-radius:  1rem 1rem 2rem 2rem;
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-size: 55px;
+    color: white;
+
+    &:nth-child(2) {
+        background-color: $color-light-red-1;
+        background-image: url('../../images/icon-work.svg');
+    }
+    &:nth-child(3) {
+        background-color: $color-light-blue;
+        background-image: url('../../images/icon-play.svg');
+    }
+    &:nth-child(4) {
+        background-color: $color-light-red-2;
+        background-image: url('../../images/icon-study.svg');
+    }
+    &:nth-child(5) {
+        background-color: $color-green;
+        background-image: url('../../images/icon-exercise.svg');
+    }
+    &:nth-child(6) {
+        background-color: $color-violet;
+        background-image: url('../../images/icon-social.svg');
+    }
+    &:nth-child(7) {
+        background-color: $color-orange;
+        background-image: url('../../images/icon-self-care.svg');
+    }
+
+    &__content {
+        padding: 1.5rem;
+        border-radius: 1rem;
+        background-color: $color-dark-blue;
+
+        & > *:not(:last-child) {
+            padding-bottom: 1rem;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: $color-desaturated-blue;
+        }
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 400;
+    }
+
+    &__text {
+        font-size: 3.2rem;
+        font-weight: 300;
+        padding-bottom: 1rem;
+    }
+
+    &__text--sm {
+        font-size: 1rem;
+        color: $color-pale-blue;
+        font-weight: 500;
+    }
+}

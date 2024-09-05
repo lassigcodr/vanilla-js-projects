@@ -1,0 +1,35 @@
+.container {
+    border-radius: 1rem;
+    background-color: $color-dark-blue;
+    display: grid;
+    grid-template-rows: 68% 32%;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+
+    &--space {
+        justify-content: space-between;
+    }
+}
+
+.body {
+    @media (max-width: 600px) {
+        display: flex;
+        align-items: center;
+    
+        &--space {
+            justify-content: space-between;
+        }
+    }
+}
+
+.ellipsis {
+    display: inline-block;
+    padding: 1rem;
+
+    &::after {
+        content: url('../images/icon-ellipsis.svg');
+    }
+}
