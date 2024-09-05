@@ -57,27 +57,27 @@
 
     &:nth-child(2) {
         background-color: $color-light-red-1;
-        background-image: url('../../images/icon-work.svg');
+        background-image: url('../images/icon-work.svg');
     }
     &:nth-child(3) {
         background-color: $color-light-blue;
-        background-image: url('../../images/icon-play.svg');
+        background-image: url('../images/icon-play.svg');
     }
     &:nth-child(4) {
         background-color: $color-light-red-2;
-        background-image: url('../../images/icon-study.svg');
+        background-image: url('../images/icon-study.svg');
     }
     &:nth-child(5) {
         background-color: $color-green;
-        background-image: url('../../images/icon-exercise.svg');
+        background-image: url('../images/icon-exercise.svg');
     }
     &:nth-child(6) {
         background-color: $color-violet;
-        background-image: url('../../images/icon-social.svg');
+        background-image: url('../images/icon-social.svg');
     }
     &:nth-child(7) {
         background-color: $color-orange;
-        background-image: url('../../images/icon-self-care.svg');
+        background-image: url('../images/icon-self-care.svg');
     }
 
     &__content {
