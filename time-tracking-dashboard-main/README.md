@@ -19,8 +19,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Click here](https://your-solution-url.com)
-- Live Site: [View here](https://your-live-site-url.com)
+- Solution URL: [Click here](https://github.com/lassigcodr/vanilla-js-projects/tree/main/time-tracking-dashboard-main)
+- Live Site: [View here](https://lassigcodr.github.io/vanilla-js-projects/time-tracking-dashboard-main/index.html)
 
 
 
