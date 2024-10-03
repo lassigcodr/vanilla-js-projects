@@ -1,0 +1,68 @@
+.hero {
+    &__image {
+        width: 100%;
+    }
+
+    &__text {
+        @media (min-width: 400px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+.new {
+    background-color: $dark-blue;
+    padding: 2.05rem 2.4rem;
+
+    &__post:not(:nth-child(2)) {
+        padding-top: 3.05rem;
+    }
+
+    &__post:not(:last-child) {
+        padding-bottom: 3.05rem;
+    }
+
+    &__post:nth-child(3) {
+        border-top: 1px solid $gray-blue;
+        border-bottom: 1px solid $gray-blue;
+    }
+}
+
+.blog {
+    @media (min-width: 40rem) {
+        display: flex;
+        gap: 3rem;
+    }
+
+    &__post {
+        display: flex;
+        gap: 2.4rem;
+    }
+
+    &__post:not(:last-child) {
+        @media (max-width: 40rem) {
+            padding-bottom: 3.2rem;
+        }
+    }
+    
+    &__image {
+        width: 10rem;
+    }
+}
+
+.btn {
+    padding: 1.7rem 3.3rem;
+    border: none;
+    background-color: $red;
+    color: $white;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    letter-spacing: 4.38px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $dark-blue;
+    }
+}
