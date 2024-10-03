@@ -1,0 +1,33 @@
+[class^="arrow-"] {
+    height: 4rem;
+    width: 4rem;
+    border: none;
+    border-radius: 50%;
+    background-color: $color-white;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+[class^="arrow-"]:not(.popup >* [class^="arrow-"]) {
+    @media (min-width: 600px) {
+        display: none;
+    }
+}
+
+.arrow-left {
+    left: 1rem;
+
+    @media (min-width: 600px) {
+        left: -2rem;
+    }
+}
+
+.arrow-right {
+    right: 1rem;
+
+    @media (min-width: 600px) {
+        right: -2rem;
+    }
+}

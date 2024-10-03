@@ -1,0 +1,67 @@
+[class^="icon-"] {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    padding: .5rem;
+}
+
+.icon-white {   
+    background-color: $color-white;
+
+    &--cart {
+        mask-image: url(../images/icon-cart.svg);
+        mask-repeat: no-repeat;
+        mask-position: center;
+    }
+}
+
+.icon-dark {   
+    background-color: #69707D;
+    transition: all .2s;
+
+    &:hover {
+        background-color: $color-secondary-dark-2;
+    }
+
+    &--cart {
+        mask-image: url(../images/icon-cart.svg);
+        mask-repeat: no-repeat;
+        mask-position: top 50% left 50%;
+    }
+}
+
+.icon-orange {   
+    background-color: #FF7E1B;
+
+    &--minus {
+        mask-image: url(../images/icon-minus.svg);
+        mask-repeat: no-repeat;
+        mask-position: top 50% left 50%;
+    }
+
+    &--plus {
+        mask-image: url(../images/icon-plus.svg);
+        mask-repeat: no-repeat;
+        mask-position: top 50% left 50%;
+    }
+}
+
+.icon-black {
+    background-color: $color-secondary-dark-2;
+
+    &:hover {
+        background-color: #FF7E1B;
+    }
+
+    &--prev {
+        mask-image: url(../images/icon-previous.svg);
+        mask-repeat: no-repeat;
+        mask-position: top 50% left 50%;
+    }
+
+    &--next {
+        mask-image: url(../images/icon-next.svg);
+        mask-repeat: no-repeat;
+        mask-position: top 50% left 50%;
+    }
+}
