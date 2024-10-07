@@ -1,0 +1,100 @@
+.navigation {
+    
+    &__background {
+        background-color: $white;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 31.7%;
+        bottom: 0;
+        opacity: 0;
+        width: 0;
+        @media (min-width: 400px) {
+            display: none;
+        }
+    }
+
+    
+    &__checkbox {
+        visibility: hidden;
+        width: 0;
+    }
+    
+    &__button {
+        height: 2.8rem;
+        position: absolute;
+        top: 3rem;
+        right: 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+
+        @media (min-width: 400px) {
+            display: none;
+        }
+    }
+    
+    &__button::after {
+        content: url('/assets/images/icon-menu.svg');
+    }
+    
+    &__button.open::after {
+        content: url('/assets/images/icon-menu-close.svg');
+        height: 2.8rem;
+    }
+    
+    &__button.open ~ &__background {
+        opacity: 1;
+        width: 100%;
+    }
+
+    &__list {
+        padding: 0 2.65rem;
+        display: none;
+        position: absolute;
+        top: 14.4rem;
+        right: 31.7%;
+        z-index: 1;
+
+        @media (min-width: 40rem) {
+            position: static;
+            display: flex;
+            align-items: center;
+            gap: 4.025rem;
+            padding: 0;
+        }
+    }
+
+    &__checkbox:checked ~ &__nav > &__list {
+        @media (max-width: 40rem) {
+            display: block;
+        }
+    }
+
+    &__item {
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        font-weight: 400;
+
+        &:not(:last-child) {
+            @media (max-width: 40rem) {
+                padding-bottom: 4.8rem;
+            }
+        }
+    }
+    
+    &__link {
+        text-decoration: none;
+        color: $dark-blue;
+        
+        &:visited,
+        &:active {
+            color: $dark-blue;
+        }
+
+        &:hover {
+            color: $red;
+        }
+    }
+}

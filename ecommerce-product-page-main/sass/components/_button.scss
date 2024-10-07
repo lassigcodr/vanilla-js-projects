@@ -1,0 +1,22 @@
+.btn {
+    border: 1.5px solid rgba($color-primary, 1);
+    background-color: rgba($color-primary, .9);
+    color: $color-white;
+    border-radius: .5rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-btn {
+    padding: 1rem;
+    border: 1.5px solid rgba($color-primary, 1);
+    background-color: rgba($color-primary, .9);
+    color: $color-white;
+    border-radius: .5rem;
+    font-size: 1.3rem;
+    width: 100%;
+    cursor: pointer;
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="script.js" defer></script>
+
+</head>
+<body>
+
+  <header class="header">
+    <div class="row">
+      <div class="col">
+        <div class="header__logo-box">
+          <img src="images/logo.svg" alt="sneakers" class="header__logo">
+        </div>
+
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item"><a href="#" class="navigation__link">Collections</a></li>
+            <li class="navigation__item"><a href="#" class="navigation__link">Men</a></li>
+            <li class="navigation__item"><a href="#" class="navigation__link">Women</a></li>
+            <li class="navigation__item"><a href="#" class="navigation__link">About</a></li>
+            <li class="navigation__item"><a href="#" class="navigation__link">Contact</a></li>
+          </ul>
+    
+          <div class="navigation__menu">
+            <img src="images/icon-menu.svg" alt="menu" class="navigation__menu-icon">
+          </div>
+        </nav>
+      </div>
+
+      <div class="col">
+        <div class="header__cart">
+          <!-- <img src="images/icon-cart.svg" alt="cart" class="header__cart-icon"> -->
+          <!-- <i class="icon icon-cart--dark"></i> -->
+          <i class="icon-dark icon-dark--cart"></i>
+          <span class="header__cart-bubble">0</span>
+        </div>
+        <div class="header__cart-container">
+          <p class="header__cart-header">Cart</p>
+          <hr>
+          <div class="header__cart-content">
+            <small>Your cart is empty.</small>
+          </div>
+        </div>
+    
+        <div class="header__profile">
+          <img src="images/image-avatar.png" alt="profile" class="header__profile-img">
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <section class="section-details" id="section-details">
+
+    <div class="row-flex">
+      <div class="col-1-of-2">
+        <div class="slider">
+          <div class="slider__image-box">
+            <a href="#popup" id="image-slider">
+              <img alt="Main Image" class="slider__image">
+            </a>
+            <button type="button" class="arrow-left"><i class="icon-black icon-black--prev"></i></button>
+            <button type="button" class="arrow-right"><i class="icon-black icon-black--next"></i></button>
+          </div>
+        </div>
+
+        <div class="images">
+          <div class="images__box">
+            <img alt="img 1" class="images__img">
+            <div class="overlay-img active"></div>
+            <!-- <input type="radio" name="overlay" class="overlay-img"> -->
+          </div>
+          <div class="images__box">
+            <img alt="img 2" class="images__img">
+            <div class="overlay-img active"></div>
+            <!-- <input type="radio" name="overlay" class="overlay-img"> -->
+          </div>
+          <div class="images__box">
+            <img alt="img 3" class="images__img">
+            <div class="overlay-img active"></div>
+            <!-- <input type="radio" name="overlay" class="overlay-img"> -->
+          </div>
+          <div class="images__box">
+            <img alt="img 4" class="images__img">
+            <div class="overlay-img active"></div>
+            <!-- <input type="radio" name="overlay" class="overlay-img"> -->
+          </div>
+        </div>
+      </div>
+      <div class="col-1-of-2">
+        <div class="product">
+          <span class="product__brand"></span>
+          <h1 class="product__title"></h2>
+          <p class="product__desc"></p>
+
+          <div class="row-2">
+            <div class="row-1">
+              <span class="product__price-new"></span>
+              <span class="product__discount"></span>
+            </div>
+            <span class="product__price-old"></span>
+          </div>
+
+          <div class="row-grid u-margin-top">
+            <div class="counter">
+              <button class="counter__btn" id="decrease-count">
+                <!-- <i class="icon icon-minus"></i> -->
+                <i class="icon-orange icon-orange--minus"></i>
+              </button>
+              <span class="counter__number">0</span>
+              <button class="counter__btn" id="increase-count">
+                <!-- <i class="icon icon-plus"></i> -->
+                <i class="icon-orange icon-orange--plus"></i>
+              </button>
+            </div>
+            <button class="btn" id="add-to-cart-id">
+              <!-- <i class="icon icon-cart--white"></i> -->
+              <i class="icon-white icon-white--cart"></i>
+              <span>Add to cart</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="popup" id="popup">
+    <div class="popup-slider">
+      <div class="popup-slider__image-box">
+        <a href="#section-details"s class="popup__close">&times;</a>
+        <img alt="Main Image" class="popup-slider__image">
+        <button type="button" class="arrow-left" id="popup-prev"><i class="icon-black icon-black--prev"></i></button>
+        <button type="button" class="arrow-right" id="popup-next"><i class="icon-black icon-black--next"></i></button>
+      </div>
+    </div>
+    <div class="popup-images">
+      <div class="popup-images__box">
+        <img alt="img 1" class="popup-images__img">
+        <div class="overlay-img"></div>
+        <!-- <input type="radio" name="overlay" class="overlay-img"> -->
+      </div>
+      <div class="popup-images__box">
+        <img alt="img 2" class="popup-images__img">
+        <div class="overlay-img"></div>
+        <!-- <input type="radio" name="overlay" class="overlay-img"> -->
+      </div>
+      <div class="popup-images__box">
+        <img alt="img 3" class="popup-images__img">
+        <div class="overlay-img"></div>
+        <!-- <input type="radio" name="overlay" class="overlay-img"> -->
+      </div>
+      <div class="popup-images__box">
+        <img alt="img 4" class="popup-images__img">
+        <div class="overlay-img"></div>
+        <!-- <input type="radio" name="overlay" class="overlay-img"> -->
+      </div>
+    </div>
+  </div>
+
+<div style="display: none;">
+  Collections
+  Men
+  Women
+  About
+  Contact
+
+  Sneaker Company
+
+  Fall Limited Edition Sneakers
+
+  These low-profile sneakers are your perfect casual wear companion. Featuring a 
+  durable rubber outer sole, they'll withstand everything the weather can offer.
+
+  $125.00
+  50%
+  $250.00
+
+  0
+  Add to cart
+</div>  
+</body>
+</html>

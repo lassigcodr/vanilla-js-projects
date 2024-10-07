@@ -1,0 +1,19 @@
+.counter {
+    background-color: $color-secondary-light;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__btn {
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+
+    &__number {
+        font-weight: 700;
+        font-size: 2rem;
+        color: $color-secondary-dark-2;
+    }
+}

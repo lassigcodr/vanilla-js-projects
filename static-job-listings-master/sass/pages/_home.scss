@@ -1,0 +1,58 @@
+.header {
+    background-color: $color-primary;
+
+    &__img {
+        max-width: 100%;
+    }
+}
+
+.section-listing {
+    width: min(100rem, 90vw);
+    margin-inline: auto;
+}
+
+.filter-bar {
+    padding: 1rem 2rem;
+    width: min(100rem, 90vw);
+    background-color: #fff;
+    border-radius: .5rem;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 12rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: $default-font-size;
+
+    @media (max-width: 600px) {
+        top: 10rem;
+    }
+
+    &--group {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    &--tag {
+        padding: .5rem;
+        display: inline-block;
+        border-radius: .3rem;
+        font-size: $default-font-size;
+        color: $color-primary;     
+    }
+
+    &--clear {
+        &,
+        &:link,
+        &:visited {
+            color: $color-primary;
+            font-weight: 700;
+        }
+    }
+}
+
+.filter-tag {
+    background-color: rgba($color-grey, .1);
+}

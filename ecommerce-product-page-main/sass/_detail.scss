@@ -1,0 +1,7 @@
+.section-details {
+    padding-top: 6rem;
+
+    @media (max-width: 600px) {
+        padding-top: 0;
+    }
+}
