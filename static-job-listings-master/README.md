@@ -23,6 +23,6 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Click](https://github.com/lassigcodr/vanilla-js-projects/tree/main/static-job-listings-main)
-- Live Site URL: [Click](https://lassigcodr.github.io/vanilla-js-projects/static-job-listings-main/index.html)
+- Solution URL: [Click](https://github.com/lassigcodr/vanilla-js-projects/tree/main/static-job-listings-master)
+- Live Site URL: [Click](https://lassigcodr.github.io/vanilla-js-projects/static-job-listings-master/index.html)
 
