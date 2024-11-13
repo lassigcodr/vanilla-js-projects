@@ -24,12 +24,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
   
-
+const formatEquation = (equation) => {
+    return equation.replace(/\d+/g, (num) => Number(num).toLocaleString());
+};
 
 const calculate = function(equation) {
     try {
+        let cleanEquation = equation.replace('x', '*').replace(/,/g, '');
         const operators = /[+\-*/]/;
-        let cleanEquation = equation.replace('x', '*');
         let index = cleanEquation.match(operators).index;
         switch(cleanEquation.at(-1)) {
             case '+':
@@ -39,8 +41,9 @@ const calculate = function(equation) {
                 cleanEquation = cleanEquation.slice(0, -1);
                 break;
         }
+        // Evaluate the result
         const res = eval(cleanEquation);
-        if(cleanEquation[index + 1]) return res.toLocaleString();
+        return res.toLocaleString();
     } catch(err) {
         return;
     }
@@ -78,10 +81,12 @@ buttons.addEventListener('click', (e) => {
             resultEl.textContent = '';
             break
         case equalTo:
-            equationEl.textContent = calculate(equationEl.textContent);
+            const result = calculate(equationEl.textContent);
+            equationEl.textContent = formatEquation(result); // Format the final result with commas
             resultEl.textContent = '';
             break
         default:
             return;
     }
+    equationEl.textContent = formatEquation(equationEl.textContent);
 })
