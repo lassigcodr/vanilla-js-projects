@@ -23,10 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setTheme(savedTheme); // Apply the saved theme
     }
 });
-  
-const formatEquation = (equation) => {
-    return equation.replace(/\d+/g, (num) => Number(num).toLocaleString());
-};
 
 const calculate = function(equation) {
     try {
@@ -82,11 +78,10 @@ buttons.addEventListener('click', (e) => {
             break
         case equalTo:
             const result = calculate(equationEl.textContent);
-            equationEl.textContent = formatEquation(result); // Format the final result with commas
+            equationEl.textContent = result; // Format the final result with commas
             resultEl.textContent = '';
             break
         default:
             return;
     }
-    equationEl.textContent = formatEquation(equationEl.textContent);
 })
