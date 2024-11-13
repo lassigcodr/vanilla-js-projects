@@ -1,0 +1,233 @@
+:root {
+    --main-bg: hsl(222, 26%, 31%);
+    --toggle-bg: hsl(223, 31%, 20%);
+    --scrn-bg: hsl(224, 36%, 15%);
+    --acc-key-bg: hsl(6, 63%, 50%);
+    --acc-key-sd: hsl(6, 70%, 34%);
+    --main-key-bg: hsl(30, 25%, 89%);
+    --main-key-sd: hsl(28, 16%, 65%);
+    --sec-key-bg: hsl(225, 21%, 49%);
+    --sec-key-sd: hsl(224, 28%, 35%);
+    --text-color: hsl(221, 14%, 31%);
+    --color-text-head: hsl(0, 0%, 100%);
+    --color-sec: hsl(0, 0%, 100%);
+    --color-equal: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "League Spartan", sans-serif;
+    background-color: var(--main-bg);
+}
+
+.container {
+    width: min(400px, 90vw);
+    margin-inline: auto;
+    padding-top: 10px;
+}
+
+.header {
+    padding: 18px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    color: var(--color-text-head);
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+}
+
+.toggle span {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--color-text-head);
+    margin-right: 10px;
+}
+
+.theme-toggle input[type="radio"] {
+    display: none;
+}
+
+.slider {
+    display: flex;
+    position: relative;
+    width: 70px;
+    background-color: var(--toggle-bg);
+    border-radius: 30px;
+    /* overflow: hidden; */
+    padding: 5px;
+}
+
+.slider .option {
+    width: 20px;
+    height: 20px;
+    flex: 1;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.slider-button {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--acc-key-bg);
+    border-radius: 15px;
+    transition: transform 0.3s;
+    z-index: 1;
+}
+
+#dark:checked ~ .slider .slider-button {
+    transform: translateX(0);
+}
+
+#light:checked ~ .slider .slider-button {
+    transform: translateX(20px);
+}
+
+#neon:checked ~ .slider .slider-button {
+    transform: translateX(40px);
+}
+
+input[type="radio"]:checked + .slider .option {
+    color: #fff;
+}
+
+.option::before {
+    content: '';
+    position: absolute;
+    top: -18px;
+    font-weight: 700;
+    color: var(--color-text-head);
+}
+
+.option:nth-child(1)::before {
+    content: '1';
+    left: 10%;
+}
+
+.option:nth-child(2)::before {
+    content: '2';
+    left: 45%;
+}
+
+.option:nth-child(3)::before {
+    content: '3';
+    right: 10%;
+}
+
+
+.screen {
+    margin-bottom: 16px;
+    padding: 0 10px;
+    height: 80px;
+    background: var(--scrn-bg);
+    text-align: right;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    overflow: hidden;
+}
+
+.screen span {
+    display: inline-block;
+    font-weight: 700;
+    color: var(--color-text-head);
+}
+
+.display-operation {
+    font-size: 32px;
+}
+
+.display-result {
+    font-size: 16px;
+    opacity: .5;
+}
+
+.buttons {
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    background: var(--toggle-bg);
+    border-radius: 8px;
+}
+
+.btn {
+    padding: 10px;
+    font-weight: 700;
+    font-size: 24px;
+    border: none;
+    border-radius: 8px;
+    border-bottom: 3px solid var(--main-key-sd);
+    background: var(--main-key-bg);
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.btn:active {
+    border-bottom: 2px solid var(--main-key-bg);
+}
+
+.btn-span-2 {
+    grid-column: span 2;
+}
+
+#delete, #clear-all {
+    background: var(--sec-key-bg);
+    border-color: var(--sec-key-sd);
+    color: var(--color-sec);
+    font-size: 18px;
+}
+
+#equal-to {
+    background: var(--acc-key-bg);
+    border-color: var(--acc-key-sd);
+    color: var(--color-equal);
+    font-size: 18px;
+}
+
+:root:has(#light:checked) {
+    --main-bg: hsl(0, 0%, 90%);
+    --toggle-bg: hsl(0, 5%, 81%);
+    --scrn-bg: hsl(0, 0%, 93%);
+    --acc-key-bg: hsl(25, 98%, 40%);
+    --acc-key-sd: hsl(25, 99%, 27%);
+    --main-key-bg: hsl(45, 7%, 89%);
+    --main-key-sd: hsl(35, 11%, 61%);
+    --sec-key-bg: hsl(185, 42%, 37%);
+    --sec-key-sd: hsl(185, 58%, 25%);
+    --text-color: hsl(60, 10%, 19%);
+    --color-text-head: hsl(60, 10%, 19%);
+    --color-sec: hsl(0, 0%, 100%);
+    --color-equal: hsl(0, 0%, 100%);
+}
+
+:root:has(#neon:checked) {
+    --main-bg: hsl(268, 75%, 9%);
+    --toggle-bg: hsl(268, 71%, 12%);
+    --scrn-bg: hsl(268, 71%, 12%);
+    --acc-key-bg: hsl(176, 100%, 44%);
+    --acc-key-sd: hsl(177, 92%, 70%);
+    --main-key-bg: hsl(281, 89%, 26%);
+    --main-key-sd: hsl(285, 91%, 52%);
+    --sec-key-bg: hsl(268, 47%, 21%);
+    --sec-key-sd: hsl(290, 70%, 36%);
+    --text-color: hsl(52, 100%, 62%);
+    --color-text-head: hsl(52, 100%, 62%);
+    --color-sec: hsl(0, 0%, 100%);
+    --color-equal:  hsl(198, 20%, 13%);
+}

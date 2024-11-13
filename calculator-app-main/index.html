@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Calculator app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>calc</h1>
+
+      <div class="toggle">
+        <span>THEME</span>
+        <div class="theme-toggle">
+          <input type="radio" name="theme" id="dark">
+          <input type="radio" name="theme" id="light">
+          <input type="radio" name="theme" id="neon">
+  
+          <div class="slider">
+            <label for="dark" class="option"></label>
+            <label for="light" class="option"></label>
+            <label for="neon" class="option"></label>
+            <div class="slider-button"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="screen">
+      <span class="display-operation"></span>
+      <span class="display-result"></span>
+    </div>
+
+    <div class="buttons">
+      <button data-num="7" class="btn btn-num">7</button>
+      <button data-num="8" class="btn btn-num">8</button>
+      <button data-num="9" class="btn btn-num">9</button>
+      <button class="btn" id="delete">DEL</button>
+
+      <button data-num="4" class="btn btn-num">4</button>
+      <button data-num="5" class="btn btn-num">5</button>
+      <button data-num="6" class="btn btn-num">6</button>
+      <button class="btn btn-sign">+</button>
+
+      <button data-num="1" class="btn btn-num">1</button>
+      <button data-num="2" class="btn btn-num">2</button>
+      <button data-num="3" class="btn btn-num">3</button>
+      <button class="btn btn-sign">-</button>
+
+      <button data-num="." class="btn btn-num">.</button>
+      <button data-num="0" class="btn btn-num">0</button>
+      <button class="btn btn-sign">/</button>
+      <button class="btn btn-sign">x</button>
+
+      <button class="btn btn-span-2" id="clear-all">RESET</button>
+      <button class="btn btn-span-2" id="equal-to">=</button>
+    </div>
+  </div>
+</body>
+</html>
