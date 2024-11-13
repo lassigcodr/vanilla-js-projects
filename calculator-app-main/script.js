@@ -39,7 +39,7 @@ const calculate = function(equation) {
         }
         // Evaluate the result
         const res = eval(cleanEquation);
-        return res.toLocaleString();
+        if(cleanEquation[index + 1]) return res.toLocaleString();
     } catch(err) {
         return;
     }
