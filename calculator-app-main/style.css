@@ -23,7 +23,6 @@
 body {
     font-family: "League Spartan", sans-serif;
     background-color: var(--main-bg);
-    position: relative;
 }
 
 .container {
