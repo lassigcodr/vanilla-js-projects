@@ -33,7 +33,7 @@ const formatEquation = function(equation) {
 const calculate = function(equation) {
     try {
         const operators = /[+\-*/]/;
-        let cleanEquation = equation.replace('x', '*');
+        let cleanEquation = equation.replace(/,/g, '').replace('x', '*');
         let index = cleanEquation.match(operators).index;
         switch(cleanEquation.at(-1)) {
             case '+':
