@@ -24,7 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
   
-
+const formatEquation = function(equation) {
+    return equation.replace(/,/g, '').replace(/\d+/g, (match) => {
+        return Number(match).toLocaleString();
+    })
+}
 
 const calculate = function(equation) {
     try {
@@ -84,4 +88,5 @@ buttons.addEventListener('click', (e) => {
         default:
             return;
     }
+    equationEl.textContent = formatEquation(equationEl.textContent);
 })
